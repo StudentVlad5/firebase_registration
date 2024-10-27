@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -17,10 +17,46 @@
     </style>
   </head>
   <body>
-    <p><a href="index.html">Go back</a></p>
+    <main>
+      <p><a href="index.html">Go back</a></p>
 
-    <ul id="ingredients"></ul>
+      <form class="form-signin">
+        <div class="container">
+          <h1>Login</h1>
+          <p>Please fill in this form to login an account.</p>
+          <hr />
 
-    <script src="js/task-02.js" type="module"></script>
+          <label for="email"><b>Email</b></label>
+          <input
+            class="form-control-mail"
+            type="text"
+            placeholder="Enter Email"
+            name="email"
+            id="email"
+            required
+          />
+
+          <label for="psw"><b>Password</b></label>
+          <input
+            class="form-control-password"
+            type="password"
+            placeholder="Enter Password"
+            name="psw"
+            id="psw"
+            required
+          />
+          <hr />
+          <div class="errorMessage"></div>
+  
+          <button type="submit" class="registerbtn login">Login</button>
+        </div>
+
+        <div class="container signin">
+          <p>Don't  have an account? <a href="#">Register</a>.</p>
+        </div>
+      </form>
+    </main>
+    <script src="./js/firebase.js" type="module"></script>
+    <script src="./js/spinner.js" type="module"></script>
   </body>
 </html>
